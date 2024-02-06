@@ -1,0 +1,1 @@
+from chartmaker.func import simple_chart

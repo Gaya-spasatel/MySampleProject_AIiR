@@ -1,8 +1,8 @@
 import leather
 
-def simple_chart(data, filepath):
-    chart = leather.Chart('Simple pairs')
-    chart.add_dots(data)
+def simple_chart(data, header, color, filepath):
+    chart = leather.Chart(header)
+    chart.add_line(data, stroke_color=color)
     chart.to_svg(filepath)
 
 data = [
@@ -12,4 +12,4 @@ data = [
     (8, 4)
 ]
 
-simple_chart(data, './examples/pairs.svg')
+simple_chart(data, 'Simple pairs', '#000000', './examples/pairs.svg')
